@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+<div>
+    <p th:text="${session.error}" th:unless="${session == null}">[...]</p>
+</div>
+<div>
+    <form method="post">
+        <input type="text" placeholder="Enter new username" name="username"/>
+        <button type="submit">Save</button>
+    </form>
+</div>
+</body>
+</html>
